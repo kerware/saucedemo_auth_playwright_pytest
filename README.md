@@ -13,11 +13,11 @@ Projet E2E limité à la fonctionnalité **Authentification** de SauceDemo.
 
 ## Principes d'architecture
 
-- **Page Object Model** : `pages/login_page.py` et `pages/inventory_page.py`.
+- **Page Object Model** : `pages/login_page.py`, `pages/inventory_page.py` et `pages/cart_page.py`.
 - **Référentiel unique de sélecteurs** : `resources/locators.py`.
 - **API métier des pages** : méthodes en vocabulaire fonctionnel, sans sélecteur dans les tests.
 - **Attentes explicites** : visibilité / éditabilité / activation avant les actions sensibles.
-- **Données externes CSV** : `data/authentication.csv`, séparateur `;`, lecture avec `csv.DictReader`.
+- **Données externes CSV** : `data/authentication.csv` et `data/cart.csv`, séparateur `;`, lecture avec `csv.DictReader`.
 - **Journal des actions** : `logs/actions_YYYYMMDD_HHMMSS.log`.
 - **Captures sur échec** : `reports/screenshots/`, attachées au rapport HTML lorsque possible.
 - **Rapport HTML** : `reports/report.html`.
@@ -35,7 +35,7 @@ Le jeu de données couvre :
 - contrôle du nom utilisateur obligatoire ;
 - contrôle du mot de passe obligatoire.
 
-Aucun scénario panier, inventaire, checkout ou logout n'est testé. L'écran Inventaire est uniquement utilisé comme **oracle de succès** après authentification.
+La couverture inclut désormais l'ajout d'un produit, l'ajout de plusieurs produits et la suppression d'un produit dans le panier. Aucun scénario checkout ou logout n'est testé.
 
 ## Lancement rapide
 
