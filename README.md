@@ -59,3 +59,10 @@ pytest --browser chromium --browser firefox --browser webkit
 ```
 
 Voir `INSTALLATION.md` pour les instructions détaillées.
+
+## Intégration continue
+
+Le workflow GitHub Actions [`.github/workflows/playwright.yml`](.github/workflows/playwright.yml)
+exécute automatiquement la suite sur Chromium, Firefox et WebKit pour chaque push sur
+`main`/`master` et chaque pull request. Les rapports HTML, journaux et captures d'échec
+sont publiés comme artefacts du workflow.
