@@ -1,0 +1,19 @@
+"""Référentiel UNIQUE des accesseurs utilisés par la suite E2E.
+
+Aucun sélecteur ne doit être dupliqué dans les Page Objects ou dans les tests.
+Priorité donnée aux attributs stables data-test. Un XPath est utilisé pour le titre
+Products afin d'illustrer la prise en charge CSS / XPath dans le même référentiel.
+"""
+
+
+class LoginLocators:
+    USERNAME = '[data-test="username"]'
+    PASSWORD = '[data-test="password"]'
+    LOGIN_BUTTON = '[data-test="login-button"]'
+    ERROR_MESSAGE = '[data-test="error"]'
+    LOGIN_CONTAINER = '[data-test="login-container"]'
+
+
+class InventoryLocators:
+    TITLE = "xpath=//span[@data-test='title' and normalize-space()='Products']"
+    INVENTORY_LIST = '[data-test="inventory-list"]'

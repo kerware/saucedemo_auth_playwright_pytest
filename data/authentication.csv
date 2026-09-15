@@ -1,0 +1,10 @@
+case_id;username;password;expected_result;expected_error
+TC_AUTH_001;standard_user;secret_sauce;SUCCESS;""
+TC_AUTH_002;problem_user;secret_sauce;SUCCESS;""
+TC_AUTH_003;performance_glitch_user;secret_sauce;SUCCESS;""
+TC_AUTH_004;error_user;secret_sauce;SUCCESS;""
+TC_AUTH_005;visual_user;secret_sauce;SUCCESS;""
+TC_AUTH_006;locked_out_user;secret_sauce;ERROR;"Epic sadface: Sorry, this user has been locked out."
+TC_AUTH_007;standard_user;mot_de_passe_invalide;ERROR;"Epic sadface: Username and password do not match any user in this service"
+TC_AUTH_008;;secret_sauce;ERROR;"Epic sadface: Username is required"
+TC_AUTH_009;standard_user;;ERROR;"Epic sadface: Password is required"
